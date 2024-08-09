@@ -11,7 +11,6 @@ def get_db_connection():
                             password=os.environ.get('password'))
     return conn
 
-
 @app.route('/')
 def index():
     conn = get_db_connection()
