@@ -8,7 +8,8 @@ def get_db_connection():
     conn = psycopg2.connect(host='pg-16da324e-geovannasouzadiniz-042a.l.aivencloud.com',
                             database='movies',
                             user=os.environ.get('user'),
-                            password=os.environ.get('password'))
+                            password=os.environ.get('password'),
+                            port=24423)
     return conn
 
 @app.route('/')
